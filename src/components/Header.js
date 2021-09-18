@@ -11,7 +11,8 @@ import { showAlert } from './alerts';
 const Header = ({user,callUser}) => {
     useEffect(()=>{ 
      callUser()
-    
+     
+   
           
     },[callUser])
    
@@ -64,10 +65,10 @@ const logout = async ()=>{
           <Link to="/Me" className="nav__el">
             <img
               className="nav__user-img"
-              src={`/img/users/${user?.data.data.user.photo}`}
+              src={`/img/users/${user?.data?.data?.user?.photo}`}
               alt="user"
             />
-            <span>{user.data.data.user.name.split(' ')[0]}</span>
+            <span>{user?.data?.data?.user?.name.split(' ')[0]}</span>
           </Link> 
         </nav>
       ) : (
@@ -86,7 +87,7 @@ const logout = async ()=>{
 
 const mapStateToProps = (state) =>{
  
- 
+ console.log(state.user)
       return {
           user:state.user
       }
