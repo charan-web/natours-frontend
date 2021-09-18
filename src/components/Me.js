@@ -107,7 +107,7 @@ const Me = ({ user, callUser }) => {
                 </li>
               </ul>
               {/* Admin page */}
-              {`${user.data.data.user.role}` === "admin" ? (
+              {`${user?.data?.data?.user?.role}` === "admin" ? (
                 <div className="admin-nav">
                   <h5 className="admin-nav__heading">Admin</h5>
                   <ul className="side-nav">
@@ -142,7 +142,7 @@ const Me = ({ user, callUser }) => {
             <div className="user-view__content">
               <div className="user-view__form-container">
                 <h2 className="heading-secondary ma-bt-md">
-                  Your Accoount Settings {`Mr.`}
+                  Your Accoount Settings {`Mr.${user?.data?.data?.user?.name.split(' ')}`}
                 </h2>
                 <form className="form form-user-data">
                   <div className="form__group">
@@ -176,7 +176,7 @@ const Me = ({ user, callUser }) => {
                   <div className="form__group form__photo-upload">
                     <img
                       className="form__user-photo"
-                      src={`/img/users/${user?.data.data.user.photo}`}
+                      src={`/img/users/${user?.data?.data?.user?.photo}`}
                       alt="user"
                     />
                     <input
