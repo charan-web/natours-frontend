@@ -71,7 +71,7 @@ const logout = async ()=>{
             <span>{user?.data?.data?.user?.name.split(' ')[0]}</span>
           </Link> 
         </nav>
-      ) : (
+      ) : ( 
         <nav className="nav nav--user">
           <Link className="nav__el" to="/login">
             Log in

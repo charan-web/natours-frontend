@@ -136,7 +136,7 @@ const Me = ({ user, callUser }) => {
                       </a>
                     </li>
                   </ul>
-                </div>
+                </div> 
               ) : null}
             </nav>
             <div className="user-view__content">
