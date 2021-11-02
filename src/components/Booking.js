@@ -14,7 +14,7 @@ import {showAlert} from "./alerts"
 const Bookings = () => {
     const tourId = useParams()
  
-    const url = `https://infinite-spire-90765.herokuapp.com//booking/checkout-session/${tourId.id}`
+    const url = `https://infinite-spire-90765.herokuapp.com/booking/checkout-session/${tourId.id}`
     
     useEffect(()=>{
         booking()
@@ -37,7 +37,10 @@ const Bookings = () => {
            const session = await axios({
                method:"get",
                url:url,
-               withCredentials:true
+               withCredentials:true,
+               headers:{
+                   "Access-Control-Allow-Origin" :"https://dreamy-shaw-9ac27c.netlify.app/booking/5c88fa8cf4afda39709c295a/"
+               }
            })
         //* Charge the credit card
              await stripe.redirectToCheckout({

@@ -31,8 +31,10 @@ const Tour = React.memo(({ user, callUser }) => {
   }, [url]);
 
   useEffect(() => {
-    callUser();
-  
+    if(localStorage.getItem('jwt')){
+      callUser()
+    }
+    
     getTour();
   }, [url, getTour, callUser]);
 
@@ -243,7 +245,7 @@ const Tour = React.memo(({ user, callUser }) => {
                       Book tour now!
                     </Link>
                   ) : (
-                    <Link to="/login" clasName="btn btn--green span-all-rows">
+                    <Link to="/login" className="btn btn--green span-all-rows">
                       Login to Book Tour
                     </Link>
                   )}
