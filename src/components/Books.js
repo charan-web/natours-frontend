@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Tours from "./Tours"
-axios.defaults.headers.common['authorization'] = `Bearer ${localStorage.getItem('jwt')}`
+axios.defaults.headers['authorization'] = `Bearer ${localStorage.getItem('jwt')}`
 const Books = () => {
     const [tourss,setTourss] = useState([])
   async  function bookings(){
