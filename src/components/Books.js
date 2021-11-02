@@ -20,6 +20,7 @@ const Books = () => {
 
     useEffect(()=>{
         bookings()
+        // async function getours
     },[])
     return ( 
     <>
