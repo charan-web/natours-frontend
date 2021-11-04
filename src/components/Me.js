@@ -70,8 +70,9 @@ const Me = ({ user, callUser }) => {
       });
       
       if (res.status === "success") {
-        showAlert("success", "updated successfully");
         window.location = "/me";
+        showAlert("success", "updated successfully");
+        
       }
     } catch (err) {
       
