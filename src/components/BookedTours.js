@@ -27,7 +27,7 @@ const BookedTours = () => {
     <>
      {tourss.length===0? <h1>No tours</h1>:
      <>
-      {tourss.tours.map(el=>{
+      {tourss.tour.map(el=>{
          return <Tours key={el}/>
       })}  </>}
     </> 
