@@ -8,7 +8,7 @@ const Books = () => {
       const tours= await axios({
         method:'get',
         url:'https://infinite-spire-90765.herokuapp.com/webhook-checkout',
-        withCredentials:true,
+        // withCredentials:true,
         headers: {
           'Authorization':  `Bearer ${localStorage.getItem('jwt')}`
         }
