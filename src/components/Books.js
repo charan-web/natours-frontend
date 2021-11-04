@@ -9,9 +9,9 @@ const Books = () => {
         method:'get',
         url:'https://infinite-spire-90765.herokuapp.com/webhook-checkout',
         // withCredentials:true,
-        headers: {
-          'Authorization':  `Bearer ${localStorage.getItem('jwt')}`
-        }
+        // headers: {
+        //   'Authorization':  `Bearer ${localStorage.getItem('jwt')}`
+        // }
       })
       setTourss(tours)
      
@@ -24,9 +24,10 @@ const Books = () => {
     },[])
     return ( 
     <>
-     {tourss.length===0? <h1>No tours</h1>:<>
+     {tourss.length===0? <h1>No tours</h1>:
+     <>
       {tourss.map(el=>{
-         return <Tours/>
+         return <Tours key={el}/>
       })}  </>}
     </> 
     );
