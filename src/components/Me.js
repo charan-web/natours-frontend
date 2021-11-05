@@ -71,7 +71,10 @@ const Me = ({ user, callUser }) => {
       const res = await axios({
         method:'patch' ,    
         url: url,
-        data:type==='password'? {currentpassword:pass.currentpassword,password:pass.password,passwordConfirm:pass.passwordConfirm} : {name:form.name,email:form.email,photo:form.photo}
+        headers: { "Content-Type": "multipart/form-data" },
+        data:type==='password'? {currentpassword:pass.currentpassword,password:pass.password,passwordConfirm:pass.passwordConfirm} : 
+        form
+        // {name:form.name,email:form.email,photo:form.photo}
       });
       
       if (res.status === "success") {
