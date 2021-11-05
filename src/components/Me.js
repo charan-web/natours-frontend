@@ -35,8 +35,6 @@ const Me = ({ user, callUser }) => {
   const handleChange = (e, type) => {
     let name = e.target.name;
     let value = e.target.value;
-    
-    
     if (type === "password") { 
       setPass({ ...pass, [name]: value });
     } else {
@@ -49,12 +47,19 @@ const Me = ({ user, callUser }) => {
    
     
   const send = async (e, data, type) => {
-    // form.append('photo',Obj.photo) 
-    // form.append('email',Obj.email)
-    // form.append('name',Obj.name) 
-    form.photo = Obj.photo
-    form.email = Obj.email
-    form.name = Obj.name
+    const form = new FormData()
+    form.append('photo',Obj.photo) 
+    form.append('email',Obj.email)
+    form.append('name',Obj.name) 
+    console.log(Array.from(form))
+
+    for(let obj of form){
+      console.log(obj)
+    }
+
+    // form.photo = Obj.photo
+    // form.email = Obj.email
+    // form.name = Obj.name
    
     e.preventDefault();
     let url =
