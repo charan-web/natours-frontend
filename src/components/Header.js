@@ -67,7 +67,8 @@ const logout = async ()=>{
           <Link to="/Me" className="nav__el">
             <img
               className="nav__user-img"
-              src={`/img/users/${user?.data?.data?.user?.photo}`}
+              src={`/img/users/user-1.jpg`}
+              // src={`/img/users/${user?.data?.data?.user?.photo}`}
               alt="user"
             />
             <span>{user?.data?.data?.user?.name.split(' ')[0]}</span>

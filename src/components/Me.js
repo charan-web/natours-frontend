@@ -187,8 +187,8 @@ const Me = ({ user, callUser }) => {
                   </div>
                   <div className="form__group form__photo-upload">
                     <img
-                      className="form__user-photo"
-                      src={`/img/users/${user?.data?.data?.user?.photo}`}
+                      className="form__user-photo"src={`/img/users/user-1.jpg`}
+                      // src={`/img/users/${user?.data?.data?.user?.photo}`}
                       alt="user"
                     />
                     <input
